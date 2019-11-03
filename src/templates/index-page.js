@@ -6,7 +6,6 @@ import hero from '../img/hero.jpg'
 import photo from '../img/audience-black-and-white-blur-2014775.jpg'
 
 import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
 import Map from '../components/Map'
 
 export const IndexPageTemplate = ({
