@@ -194,9 +194,6 @@ export const pageQuery = graphql`
           heading
           description
         }
-          heading
-          description
-        }
       }
     }
   }
