@@ -110,19 +110,6 @@ export const IndexPageTemplate = ({
             </div>
         </div>
 
-{/* <div className="section" id="blog">
-
-        <div className="column is-12">
-          <h1 className="has-text-weight-semibold is-size-2 title">From the Pastor's Heart</h1>
-          <BlogRoll />
-          <div className="column is-12 has-text-centered">
-            <Link className="btn" to="/blog">
-              Read more
-            </Link>
-          </div>
-        </div>
-
-    </div> */}
     </section>
   </div>
 )
