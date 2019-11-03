@@ -2,31 +2,30 @@
 templateKey: index-page
 title: Welcome to LifeSpring Bristol
 heroBanner:
-  image: /img/main-header.jpg
   heading: Welcome to LifeSpring Church Bristol
+  image: /img/barrel-wave-motion-nature-1298684.jpg
+  tagline: People Meeting Jesus
 mainpitch:
-  title: Awakening. Refreshing. Community.
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  title: Awakening. Refreshing. Community.
 moreinfo:
-  heading: LifeSpring Bristol is a place for people
   description: >
-    We celebrate with worship, prayer, and time together as a family. If you have children, know we
-    have a childrens' church program just for them that includes play, prayer, and time spent learning about the
-    presence and love of Jesus.
+    We celebrate with worship, prayer, and time together as a family. If you
+    have children, know we have a childrens' church program just for them that
+    includes play, prayer, and time spent learning about the presence and love
+    of Jesus.
+  heading: LifeSpring Bristol is a place for people
+  image: /img/audience-black-and-white-blur-2014775.jpg
 location:
-  heading: Come Worship With Us
   description: >
     We meet every Sunday at 10am EST in the Holiday Inn Conference Center.
-    Children under 10 will meet for Childrens' Service in an adjacent room to the main worship room.
+    Children under 10 will meet for Childrens' Service in an adjacent room to
+    the main worship room.
+  heading: Come Worship With Us
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -56,19 +55,19 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+  heading: What we offer
 main:
-  heading: Great coffee with no compromises
   description: >
     We hold our coffee to the highest standards from the shrub to the cup.
     That’s why we’re meticulous and transparent about each step of the coffee’s
     journey. We personally visit each farm to make sure the conditions are
     optimal for the plants, farmers and the local environment.
+  heading: Great coffee with no compromises
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
