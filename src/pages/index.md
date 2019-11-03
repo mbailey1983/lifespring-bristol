@@ -1,11 +1,11 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/cascade-environment-flow-1000560.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Welcome to LifeSpring Bristol
+heroBanner:
+  image: /img/main-header.jpg
+  heading: Welcome to LifeSpring Church Bristol
 mainpitch:
-  title: Why Kaldi
+  title: Awakening. Refreshing. Community.
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
@@ -16,6 +16,17 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
+moreinfo:
+  heading: LifeSpring Bristol is a place for people
+  description: >
+    We celebrate with worship, prayer, and time together as a family. If you have children, know we
+    have a childrens' church program just for them that includes play, prayer, and time spent learning about the
+    presence and love of Jesus.
+location:
+  heading: Come Worship With Us
+  description: >
+    We meet every Sunday at 10am EST in the Holiday Inn Conference Center.
+    Children under 10 will meet for Childrens' Service in an adjacent room to the main worship room.
 intro:
   blurbs:
     - image: /img/coffee.png

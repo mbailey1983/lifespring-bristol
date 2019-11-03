@@ -38,6 +38,16 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
+        <script src="%PUBLIC_URL%/env.js"></script>
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -51,6 +61,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div>{children}</div>
       <Footer />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </div>
   )
 }

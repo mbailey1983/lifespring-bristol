@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^2.0.26",
     "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.1.9",
+    "google-maps-react": "^2.0.2",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms-app": "^2.9.6",
@@ -41,11 +42,14 @@
     "clean": "gatsby clean",
     "start": "npm run develop",
     "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
+    "prestart": "react-env",
+    "develop": "npm run clean && gatsby develop && npm run prestart",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
+    "@beam-australia/react-env": "^2.1.2",
     "prettier": "^1.15.3"
   }
 }

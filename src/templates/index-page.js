@@ -1,115 +1,129 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import logo from '../img/image1.jpeg'
+import hero from '../img/hero.jpg'
+import photo from '../img/audience-black-and-white-blur-2014775.jpg'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import Map from '../components/Map'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
   mainpitch,
-  description,
+  moreinfo,
+  location,
   intro,
 }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
+        backgroundImage: `url(${image})`,
+        backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
       }}
     >
       <div
+        className="columns herorow is-desktop"
         style={{
           display: 'flex',
-          height: '150px',
+          width: '100%',
           lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+        <div className="column hero1 is-full-mobile is-one-third-tablet is-two-fifths-desktop">
+          <figure
+            className="image"
+            style={{
+              height: '30vh',
+            }}
+          >
+            <img
+              src={logo}
+              className="heroimg"
+              alt="LifeSpring Bristol Logo"
+              style={{
+                borderRadius: '50%',
+              }}
+            />
+          </figure>
+        </div>
+        <div className="column hero2 is-full-mobile is-two-thirds-tablet is-three-fifths-desktop">
+          <h1
+            className="has-text-centered has-text-weight-bold is-size-2-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              color: '#06A2DF',
+              lineHeight: '1.3',
+              padding: '0.25em',
+            }}
+          >
+            {title}
+          </h1>
+        </div>
       </div>
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
+        <div className="section" id="mainsection">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
+
+
                     <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
+
+                    <h4 className="subtitle">{mainpitch.description}</h4>
+
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div className="section" id="moreinfo" style={{marginTop: '5%', marginBottom: '5%'}}>
+          <div className="container">
+          <div className="columns">
+            <div className="column is-5 is-offset-1">
+              <figure className="image is-5by4">
+                <img src={image} alt="" />
+              </figure>
+            </div>
+            <div className="column is-5">
+              <h1 className="title">{moreinfo.heading}</h1>
+              <h4 className="subtitle">{moreinfo.description}</h4>
+            </div>
+          </div>
+          </div>
+
+        </div>
+        <div className="section" id="location" style={{marginTop: '5%', marginBottom: '5%'}}>
+            <div className="container">
+              <div className="columns">
+                <div className="column is-5 is-offset-1">
+                  <h1 className="title">{location.heading}</h1>
+                  <h4 className="subtitle">{location.description}</h4>
+                </div>
+                <div className="column is-5" style={{height: '45vh', width: '50%'}}>
+                  <Map />
+                </div>
+              </div>
+            </div>
+        </div>
+
+{/* <div className="section" id="blog">
+
+        <div className="column is-12">
+          <h1 className="has-text-weight-semibold is-size-2 title">From the Pastor's Heart</h1>
+          <BlogRoll />
+          <div className="column is-12 has-text-centered">
+            <Link className="btn" to="/blog">
+              Read more
+            </Link>
+          </div>
+        </div>
+
+    </div> */}
     </section>
   </div>
 )
@@ -118,13 +132,15 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
   mainpitch: PropTypes.object,
+  moreinfo: PropTypes.object,
+  location: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
 }
+
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -135,8 +151,9 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
+        moreinfo={frontmatter.moreinfo}
+        location={frontmatter.location}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -159,20 +176,28 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        heroBanner {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
+          heading
         }
-        heading
-        subheading
         mainpitch {
           title
           description
         }
-        description
+        moreinfo {
+          heading
+          description
+        }
+        location {
+          heading
+          description
+        }
         intro {
           blurbs {
             image {

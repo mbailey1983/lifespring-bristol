@@ -1,16 +1,25 @@
 @import "~bulma/sass/utilities/initial-variables"
-
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
 // Config vars
 // Kaldi logo brand color: #FD461E
-$ls-ltblue: #D64000
-$ls-blue: #3574df
-$ls-green: #3574df
-$kaldi-red-invert: #fff
+$ls-ltblue: #06A2DF
+$ls-blue: #23519F
+$ls-green: #A6D136
+$ls-white: #fff
 
 $primary: $ls-ltblue
-$primary-invert: $kaldi-red-invert
+$primary-invert: $ls-blue
 $body-color: #333
-$black: #2b2523
+$black: $ls-blue
+$family-secondary: 'Nothing You Could Do', cursive;
+
+h1.title
+  font-family: $family-secondary
+  color: $primary
+  padding-bottom: 2%
+
+h4.subtitle
+  line-height: 1.5 !important
 
 .content .taglist
   list-style: none
@@ -34,7 +43,7 @@ $black: #2b2523
   position: relative
   left: 50%
   right: 50%
-  margin: 2em -50vw
+  // margin: 2em -50vw
   background-size: cover
   background-position: center
   display: flex
@@ -43,12 +52,32 @@ $black: #2b2523
 
 .full-width-image
     width: 100vw
-    height: 40vhgreen
+    height: 80vh
     background-size: cover
     background-position: center
     display: flex
     justify-content: center
     align-items: center
+
+.herorow
+  display: flex
+  flex-flow: row
+  justify-content: center
+  align-items: center
+  background-color: #ffffff
+  height: 30vh
+
+.hero1
+  display: flex !important
+  flex-flow: row
+  justify-content: flex-end !important
+  align-items: center
+
+.hero2
+  display: flex !important
+  flex-flow: row
+  justify-content: flex-start !important
+  align-items: center
 
 .btn
     display: inline-block
@@ -56,14 +85,15 @@ $black: #2b2523
     font-size: 18px
     font-size: 1rem
     line-height: 1.25
-    background-color: #fff
+    background-color: $ls-ltblue
     border-radius: .25rem
+    border: none
     text-decoration: none
     font-weight: 700
-    color: $ls-green
+    color: #fff
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px $ls-green
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px #06A2DF
+    box-shadow: inset 0 0 0 2px #06A2DF
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
@@ -73,24 +103,56 @@ $black: #2b2523
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
+.image img.heroimg
+  margin-right: 0 !important
+  height: 100% !important
+  width: auto !important
+
 .icon svg
   width: 1.5rem
   height: 1.5rem
   fill: currentColor
+.navbar
+  height: 8vh
+  padding: 0 5rem
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
+.navbar-brand .navbar-item img
+  max-height: 4rem !important
+  width: auto
+.navbar-brand a:hover
+  border: none
+.navbar-item
+  color: $primary !important
+  font-weight: 600 !important
+  padding: 1.3rem !important
+.navbar-give
+  background: $primary !important
+  color: $ls-white !important
+  font-weight: 700 !important
+  letter-spacing: 2
+  padding: 1.3rem 2.5rem !important
+  border: solid 1px $primary
+.navbar-item:hover
+  color: $ls-blue !important
+  border: solid 1px $ls-blue
+.navbar-give:hover
+  color: $primary !important
+  border: solid 1px $primary
+  background: $ls-white !important
+
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
 
 //Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $ls-ltblue !important
+$menu-item-color: $white
+$menu-item-hover-color: #B2E5F9 !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
+$menu-item-active-color: #B2E5F9
+$menu-list-border-top: 1px solid $white
+$menu-list-border-bottom: 1px solid $white
+$menu-label-color: $white
 
 
 .menu-label
@@ -99,6 +161,23 @@ $menu-label-color: $white-ter
 .menu-list
   list-style: none !important
   text-align: left
+.menu-list .navbar-item
+  color: $white !important
+  font-weight: 600 !important
+  padding: 1.3rem !important
+.menu-list a.navbar-item:focus
+  border-top: solid 1px $white
+  border-bottom: solid 1px $white
+  border-left: none
+  border-right: none
+  background-color: transparent
+
+.menu-list a.navbar-item:hover
+  border-top: solid 1px $white
+  border-bottom: solid 1px $white
+  border-left: none
+  border-right: none
+  background-color: transparent
 .social
   padding: 2em
 .social a
@@ -113,7 +192,7 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: rgba(35,81,159, 0.2);
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
@@ -131,6 +210,14 @@ $menu-label-color: $white-ter
     flex-basis: 50%;
 
 +mobile
+  .herorow
+    flex-flow: column
+    height: 70vh
+    background-color: rgba(255,255,255,0.65)
+  .hero1
+    justify-content: center
+  .hero2
+    justify-content: center
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail

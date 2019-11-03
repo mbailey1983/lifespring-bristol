@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -42,7 +40,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="LifeSpring Bristol" style={{ width: '88px' }} />
+              LifeSpring Church Bristol
             </Link>
             {/* Hamburger menu */}
             <div
@@ -59,30 +57,18 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-info has-text-centered">
-              <Link className="navbar-item" to="/about">
+            <div className="navbar-end has-text-centered">
+              {/* <Link className="navbar-item" to="/about">
                 About
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
-              </Link>
+              </Link> */}
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
+              <a className="navbar-give navbar-item" href="https://www.simplechurchgiving.net/app/giving/lifespringbristol">
+                Give
               </a>
             </div>
           </div>

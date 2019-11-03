@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'LifeSpring Church Bristol',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'LifeSpring Bristol is a church that is focused on the Word and building a community in SouthWest VA and NorthEast TN.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
