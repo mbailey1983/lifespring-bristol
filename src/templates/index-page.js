@@ -22,7 +22,7 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
       style={{
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${hero})`,
         backgroundPosition: `center`,
         backgroundAttachment: `fixed`,
       }}
@@ -86,7 +86,7 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-5 is-offset-1">
               <figure className="image is-5by4">
-                <img src={image} alt="" />
+                <img src={photo} alt="" />
               </figure>
             </div>
             <div className="column is-5">
@@ -136,9 +136,6 @@ IndexPageTemplate.propTypes = {
   moreinfo: PropTypes.object,
   location: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 
@@ -155,7 +152,6 @@ const IndexPage = ({ data }) => {
         moreinfo={frontmatter.moreinfo}
         location={frontmatter.location}
         description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -198,17 +194,6 @@ export const pageQuery = graphql`
           heading
           description
         }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
           heading
           description
         }
